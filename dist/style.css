@@ -1,0 +1,272 @@
+@import url("https://cdn.realsgii2.dev/pathOS/font/sansation.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap");
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  font-family: "Sansation", sans-serif;
+}
+
+body {
+  overflow-y: auto !important;
+}
+
+*,
+*::before,
+*::after {
+  font: inherit;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.heroBanner {
+  height: 100%;
+  position: relative;
+  background-image: url("https://cdn.realsgii2.dev/art/jack_forest.png");
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+.heroBanner > * {
+  margin: 0;
+}
+
+body > main {
+  min-height: 25vh;
+  background-color: #fff;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.6);
+  position: relative;
+  z-index: 5;
+  padding: 3rem 15vmin 15vmin;
+}
+
+.brandText {
+  font-family: "Sansation";
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 400;
+}
+
+button, .button {
+  display: inline-flex;
+  justify-content: center;
+  height: 36px;
+  line-height: 36px;
+  min-width: 92px;
+  padding: 0 1.5rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: 175ms ease-out;
+}
+button.overBg, .button.overBg {
+  background-color: #fff;
+  color: #000;
+  font-family: "Sansation";
+  font-weight: 700;
+}
+button.overBg:hover, button.overBg:focus, .button.overBg:hover, .button.overBg:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+button.overBg:focus, .button.overBg:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+}
+button.overBgOutline, .button.overBgOutline {
+  background-color: transparent;
+  color: #fff;
+  border: solid 1px #fff;
+  font-family: "Sansation";
+  font-weight: 700;
+}
+button.overBgOutline:hover, button.overBgOutline:focus, .button.overBgOutline:hover, .button.overBgOutline:focus {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+button.overBgOutline:focus, .button.overBgOutline:focus {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25);
+}
+button.cta, .button.cta {
+  background-color: #242424;
+  color: #fff;
+  font-weight: 700;
+}
+button.cta:hover, button.cta:focus, .button.cta:hover, .button.cta:focus {
+  background-color: rgba(36, 36, 36, 0.75);
+}
+button.cta:focus, .button.cta:focus {
+  box-shadow: 0 0 0 2px rgba(36, 36, 36, 0.35);
+}
+button.outline, .button.outline {
+  background-color: transparent;
+  color: #242424;
+  border: solid 1px #242424;
+  font-weight: 700;
+}
+button.outline:hover, button.outline:focus, .button.outline:hover, .button.outline:focus {
+  border-color: rgba(36, 36, 36, 0.35);
+}
+button.outline:focus, .button.outline:focus {
+  box-shadow: 0 0 0 2px rgba(36, 36, 36, 0.175);
+}
+button.large, .button.large {
+  height: 44px;
+  line-height: 44px;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+
+.appbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 64px;
+  width: 100%;
+  padding: 0 1.5rem;
+  color: #fff;
+  z-index: 999;
+  display: flex;
+  transition: 175ms ease-out;
+}
+.appbar > section {
+  font-family: "Sansation", sans-serif;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.appbar > section:nth-child(1) {
+  flex: 1;
+}
+.appbar > section:nth-child(2) {
+  gap: 1.5rem;
+}
+.appbar > section:nth-child(2) > a {
+  color: inherit;
+  text-decoration: none;
+  transition: 175ms ease-out;
+}
+.appbar > section:nth-child(2) > a:hover {
+  opacity: 0.5;
+}
+.appbar > section:nth-child(3) {
+  flex: 1;
+  justify-content: flex-end;
+}
+.appbar.scrolled {
+  color: #000;
+  background-color: #fff;
+  height: 48px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.15);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Sansation";
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1.25rem;
+  font-family: "Sansation";
+}
+p:not(.label) {
+  margin-bottom: 4rem;
+}
+p .label {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #295e8b;
+}
+
+.imgRow {
+  --g-gap: 8px;
+  --g-size-def: 25%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: calc(var(--g-gap) / -2);
+}
+.imgRow .imgCol {
+  flex: var(--g-size, var(--g-size-def));
+  max-width: var(--g-size, var(--g-size-def));
+  padding: calc(var(--g-gap) / 2);
+}
+.imgRow .imgCol .imgPost {
+  margin-top: var(--g-gap);
+}
+.imgRow .imgCol .imgPost img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+@media screen and (max-width: 800px) {
+  .imgCol {
+    --g-size: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .imgCol {
+    --g-size: 100%;
+  }
+}
+.imgPost {
+  display: block;
+  overflow: hidden;
+}
+.imgPost img {
+  transition: 175ms ease-out;
+}
+.imgPost:hover img {
+  transform: scale(1.05);
+  margin: 0;
+}
+
+.lightBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  z-index: 1015;
+}
+.lightBox main {
+  background-color: #fff;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.6);
+}
+.lightBox main > img {
+  max-width: 60vw;
+  max-height: 60vh;
+}
+.lightBox main > div {
+  padding: 1.5rem;
+}
+.lightBox main > div > div:first-child {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.spacer {
+  flex: 1 0 auto;
+}
